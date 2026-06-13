@@ -1,7 +1,6 @@
-[English](README.md) | [简体中文](README_zh-CN.md)
-
 # Confidence Calibration for Low-Resolution Text Recognition
 
+[English](README.md) | [简体中文](README_zh-CN.md)
 This project evaluates whether scene text recognition models produce reliable confidence estimates when recognizing low-resolution images.
 
 The study compares three pretrained text recognition models—**CRNN, ASTER, and MORAN**—on the TextZoom dataset. In addition to recognition accuracy, the project examines model calibration, overconfident errors, and the effects of visual degradation such as low contrast, blur, and complex backgrounds.
