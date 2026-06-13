@@ -143,18 +143,28 @@ An HCER value of zero does not mean that the recognizer made no errors. It means
 ├── Extractor.ipynb
 ├── Project.ipynb
 ├── Report.pdf
-├── aster_demo.pth
-├── Moran_demo.pth
-├── crnn.pth
 └── all_labels.csv
 ```
 * `Extractor.ipynb`: extracts paired LR/HR images and labels from the original TextZoom LMDB files
 * `Project.ipynb`: model inference, confidence extraction, evaluation, visual-condition analysis, and calibration
 * `Report.pdf`: full project report and discussion
 * `all_labels.csv`: TextZoom labels, image paths, and dataset splits
+
+## Pretrained Checkpoints
+
+```text
+.
+├── aster_demo.pth
+├── Moran_demo.pth
+└── crnn.pth
+```  
 * `aster_demo.pth`: pretrained ASTER checkpoint used by the evaluation pipeline
 * `Moran_demo.pth`: pretrained MORAN checkpoint used by the evaluation pipeline
 * `crnn.pth`: pretrained CRNN checkpoint used by the evaluation pipeline
+
+Download the Pretrained Checkpoints from:
+
+* [Pretrained Checkpoints](https://drive.google.com/drive/folders/1LLJgzzbFV2312nnzjy_QIcQbAfn9onhb?usp=drive_link)
 
 ## Requirements
 
