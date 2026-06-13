@@ -140,11 +140,12 @@ An HCER value of zero does not mean that the recognizer made no errors. It means
 ```text
 .
 ├── README.md
+├── Extractor.ipynb
 ├── Project.ipynb
 ├── Report.pdf
 └── all_labels.csv
 ```
-
+* `Extractor.ipynb`: extracts paired LR/HR images and labels from the original TextZoom LMDB files
 * `Project.ipynb`: model inference, confidence extraction, evaluation, visual-condition analysis, and calibration
 * `Report.pdf`: full project report and discussion
 * `all_labels.csv`: TextZoom labels, image paths, and dataset splits
@@ -161,6 +162,54 @@ pip install torch torchvision pandas numpy scipy scikit-learn \
 The original implementations and pretrained checkpoints for CRNN, ASTER, and MORAN must also be downloaded separately.
 
 A CUDA-compatible GPU is recommended because the current notebook loads the recognizers on CUDA.
+
+## Project Workflow
+
+```text
+TextZoom LMDB files
+        |
+        v
+Extractor.ipynb
+        |
+        +--> Extract LR and HR PNG images
+        |
+        +--> Generate split-level labels.csv files
+        |
+        +--> Generate all_labels.csv
+        |
+        v
+Project.ipynb
+        |
+        +--> Run CRNN, ASTER, and MORAN inference
+        |
+        +--> Normalize predictions and confidence scores
+        |
+        +--> Calculate accuracy and calibration metrics
+        |
+        +--> Analyze visual degradation groups
+        |
+        +--> Apply Platt scaling
+        |
+        v
+Figures, tables, and final report
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Running the Project
 
