@@ -307,5 +307,3 @@ The original model implementations, papers, licenses, and copyright notices shou
 ## Author
 
 **Songtao Zhang**
-
-Data Science and Business undergraduate at the University of Rochester.
