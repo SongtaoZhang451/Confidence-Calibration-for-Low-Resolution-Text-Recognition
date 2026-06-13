@@ -1,3 +1,5 @@
+[English](README.md) | [简体中文](README_zh-CN.md)
+
 # Confidence Calibration for Low-Resolution Text Recognition
 
 This project evaluates whether scene text recognition models produce reliable confidence estimates when recognizing low-resolution images.
