@@ -143,12 +143,18 @@ An HCER value of zero does not mean that the recognizer made no errors. It means
 ├── Extractor.ipynb
 ├── Project.ipynb
 ├── Report.pdf
+├── aster_demo.pth
+├── Moran_demo.pth
+├── crnn.pth
 └── all_labels.csv
 ```
 * `Extractor.ipynb`: extracts paired LR/HR images and labels from the original TextZoom LMDB files
 * `Project.ipynb`: model inference, confidence extraction, evaluation, visual-condition analysis, and calibration
 * `Report.pdf`: full project report and discussion
 * `all_labels.csv`: TextZoom labels, image paths, and dataset splits
+* `aster_demo.pth`: pretrained ASTER checkpoint used by the evaluation pipeline
+* `Moran_demo.pth`: pretrained MORAN checkpoint used by the evaluation pipeline
+* `crnn.pth`: pretrained CRNN checkpoint used by the evaluation pipeline
 
 ## Requirements
 
@@ -194,22 +200,46 @@ Project.ipynb
 Figures, tables, and final report
 ```
 
+## External Repositories and Downloads
 
+### TextZoom Dataset
 
+Download the TextZoom dataset from:
 
+* [WenjiaWang0312/TextZoom](https://github.com/WenjiaWang0312/TextZoom)
 
+### Recognition Model Implementations
 
+Download model repositories:
 
+* [ASTER — ayumiymk/aster.pytorch](https://github.com/ayumiymk/aster.pytorch)
+* [MORAN — Canjie-Luo/MORAN_v2](https://github.com/Canjie-Luo/MORAN_v2)
+* [CRNN — meijieru/crnn.pytorch](https://github.com/meijieru/crnn.pytorch)
 
+## Pretrained Checkpoints Included
 
+| Model | Checkpoint File  | Approximate Size |
+| ----- | ---------------- | ---------------: |
+| ASTER | `aster_demo.pth` |            81 MB |
+| MORAN | `Moran_demo.pth` |            78 MB |
+| CRNN  | `crnn.pth`       |            32 MB |
 
+Recommended local structure:
 
+```text
+checkpoints/
+├── aster_demo.pth
+├── Moran_demo.pth
+└── crnn.pth
+```
 
+Update the paths in `Project.ipynb`:
 
-
-
-
-
+```python
+ASTER_CHECKPOINT = r"path/to/checkpoints/aster_demo.pth"
+MORAN_CHECKPOINT = r"path/to/checkpoints/Moran_demo.pth"
+CRNN_CHECKPOINT = r"path/to/checkpoints/crnn.pth"
+```
 
 ## Running the Project
 
